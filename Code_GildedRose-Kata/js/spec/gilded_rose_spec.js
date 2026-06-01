@@ -6,4 +6,13 @@ describe("Gilded Rose", function() {
     expect(items[0].quality).toEqual(8);
   });
 
+  it("The Quality of an item is never negative", function() {
+    items = [ new Item("foo1", 0, 1) ];
+    update_quality();
+    update_quality();
+    update_quality();
+    expect(items[0].quality).toEqual(0);
+  });
+
+
 });
