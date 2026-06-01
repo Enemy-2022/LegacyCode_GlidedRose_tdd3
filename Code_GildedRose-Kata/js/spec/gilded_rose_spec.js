@@ -13,6 +13,12 @@ describe("Gilded Rose", function() {
     update_quality();
     expect(items[0].quality).toEqual(0);
   });
+  
 
+  it("Aged Brie actually increases in Quality the older it gets", function() {
+    items = [ new Item("Aged Brie", 5, 0) ];
+    update_quality();
+    expect(items[0].quality).toEqual(1);
+  });
 
 });
